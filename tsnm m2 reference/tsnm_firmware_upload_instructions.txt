@@ -1,0 +1,21 @@
+TSNM (Touch Sensing Note Memory) firmware upload instructions
+MMXXIII, www.doboz.audio
+
+#1 PREPARE/CHECK YOUR TEENSY
+If this is a freshly built module cut the "V_USB" trace on the back of the Teensy (v_usb_trace.jpg). If you're not sure about the state of "V_USB" trace you can check the continuity between the two pads with a multimeter or by disconnecting the module from the modular power and connecting the Teensy (while still in the module) with a USB cable to your computer. If it boots normally that means that the "V_USB" trace is intact, in this case cut the trace.
+Cutting the trace is mainly a precautionary measure (it is to prevent powering the Teensy simultaneously from USB and the modular synthesizer power supply when updating the firmware, doing so might have undesirable consequences). Cutting the trace is not essential for the module to work, if you prefer, you can leave the trace intact as long as you remember to disconnect your module from the modular power supply when connecting a USB cable. In this case, the Teensy must be powered solely via the USB-cable, which will be just as fine for the purpose of occasionally flashing the MCU. If you do cut the V_USB trace you won’t be able to upload the firmware unless you power the Teensy by way of powering up the module.
+
+
+#2 INSTALL THE "TEENSY LOADER" PROGRAM
+- the Teensy Loader is available at: https://www.pjrc.com/teensy/loader.html
+- v1.33 of the Teensy Loader or later is required
+
+#3 OPEN THE HEX FILE IN THE TEENSY LOADER
+- open the HEX file in the Teensy Loader application
+- make sure a USB cable is connected to the Teensy, and that the TSNM module is powered up
+- press the program push button on the Teensy board (on the back of the TSNM module)
+- click the "Program" icon, or choose "Program" from the "Operation" menu in Teensy Loader
+- you should briefly see a progress bar as the firmware is uploaded
+- click the "Reboot" icon or choose "Operation" > "Reboot"
+- your TSNM should now run the updated firmware or come to life, if newly built
+- if this is a newly built module, proceed to calibration detailed in "TSNM Firmware v50 User's Guide" document

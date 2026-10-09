@@ -1,0 +1,163 @@
+                               TSNM4U
+                                TOUCH SENSING NOTE MEMORY
+                                         BY DOBOZ
+
+
+
+
+PRIZMA+ USER’S GUIDE PAGE: 3
+                                                               NOTE CV OUT (OVER 7 OCTAVES)
+                                                               PULSE OUT
+                                                               PRESSURE OUT (0-10V)
+                                                               CLOCK IN
+
+
+
+
+“P” PORTAMENTO POT
+SETS THE SPEED OF GLIDING                                                                     TRANSPOSE PLATES
+                                                                                              TO EDIT TRANSPOSITION DISTANCE
+“C” CLOCK POT                                                                                 HOLD THE PLATE AND ROTATE
+SETS THE RATE OF THE INTERNAL                                                                 ENCODER (RANGES FROM -24 TO +24
+CLOCK. WHEN TURNED FULLY COUNTER-                                                             SEMITONES)
+CLOCKWISE, THE INTERNAL CLOCK IS
+DISABLED AND THE UNIT EXPECTS A                                                               NOTE PLATES
+CLOCK SIGNAL ON ITS CLOCK INPUT.                                                              HOLD A NOTE PLATE AND ROTATE THE
+                                                                                              ENCODER TO TUNE ITS CORRESPONDING
+ENCODER                                                                                       CV. (TUNING IS QUANTISED TO
+HOLD FOR 1 SECOND TO ENTER/EXIT                                                               SEMITONES, ALTERS CV OUTPUT OVER
+SETTINGS, IN ARP MODE PRESS TO                                                                3 OCTAVES)
+LATCH ARPEGGIATOR, IN SEQ MODE
+PRESS TO RESET SEQUENCE.
+
+
+
+
+                                    TSNM 4U USER’S GUIDE ‹2›
+MODE                               SEQ DIRECTION                                     SEQUENCE LENGTH                                SEQUENCE EDITOR                                    SEQUENCE LEARN                                     RANDOM NOTE
+  KEYBOARD                            UP                                             Determines the length of the sequence, from    Rotate encoder to scroll through steps. Hold       Touch note plates to enter the sequence.           Hold right transpose plate and rotate encoder
+  ARPEGGIATOR                         DOWN                                           1 to 32 steps.                                 left transpose plate and rotate encoder to edit    Press left transpose plate to alter step length.   to edit scope of random notes (1-30). Hold
+  SEQUENCER                           PING-PONG                                                                                     note per step. Hold right transpose plate and      Press right transpose plate to toggle on/off       left transpose plate and rotate encoder to edit
+                                      RANDOM                                                                                        rotate encoder to edit trigger per step. Hold      trigger per step. Rotate encoder to undo step      probability of randomness (0-35).
+                                                                                                                                    both transpose plates and rotate encoder to        (no redo!). When you’re done press encoder
+                                                                                                                                    edit length per step (L1-L8).                      to exit learn mode.
+
+
+
+
+PRESENT ONLY IN ARPEGGIATOR MODE
+                                                                                                                   PRESENT ONLY IN SEQUENCER MODE
+
+                                                                                                                                    Hold left transpose plate and rotate encoder to
+                                                                                                                                    select reset source, which restarts the playback
+                                                                                                                                    from the begining:
+                                                                                                                                           FREE RUNNER
+                                                                                                                                           TOUCH PLATES
+                                                                                                                                           CLOCK
+                                                                                                                                    After exiting settings the loop will be over-
+ARP DIRECTION                      ARP VARIATOR                                      PRESSURE: MODE                                                                                    PRESSURE RISE TIME                                 PRESSURE FALL TIME
+                                                                                                                                    dubbed whenever a note plate is touched. To
+   UP                              Hold left transpose plate and rotate encoder to      PRESSURE                                    avoid this the recorded loop can be locked.
+                                                                                                                                                                                       Creates slew limiting effect on rising edge of     Creates slew limiting effect on falling edge of
+   DOWN                            choose when variation happenes:                      RANDOM                                      Rotate encoder CW to disable overdubbing (lock
+                                                                                                                                                                                       pressure output (0-20) in all pressure modes       pressure output (0-20) in all pressure modes.
+   PING-PONG                           NEVER                                         Generates random voltage with every                                                               except pulse.
+                                                                                                                                    loop), CCW to enable it (unlock).
+   RANDOM                              AFTER EVERY STEP                              triggered note or clock pulse.
+                                       AT THE END OF ARP SEQUENCE                                                                          LOCKED
+                                                                                            GATE                                           UNLOCKED
+                                   Hold right transpose plate and rotate encoder            PULSE
+                                   to determine the number of additional notes
+                                                                                            RECORD
+                                   (1-6). Hold both transpose plates and ro-
+                                                                                     Records and replays pressure activity up to
+                                   tate encoder to determine the distance of
+                                                                                     4 seconds. Press and hold any note plate
+                                   additional notes. From the previous note (1-12
+                                                                                     for the desired time to set the length of
+                                   semitones).
+                                                                                     recording. Hold right transpose plate and
+                                                                                     rotate encoder to set play mode:
+                                                                                            LOOPING
+                                                                                            ONE-SHOT
+
+                                                                                                               TSNM 4U USER’S GUIDE ‹3›
+QUANTISER                                          TRANSPOSE MODE                                        PLATE VALUES                                     PULSE MODE                 VOLTAGE MODE                                          CLOCK DIVIDER
+Applies a quantification to the outgoing control   Sets the behavior and response of                     Touch and hold plates and rotate encoder to         TRANSIENT (TRIGGER)       1.2V/oct                                            Applies division to the incoming clock signal
+voltage, which can be quantized to semitones,      transposition plates.                                 set their value. Transposition distance ranges      SUSTAINED (GATE)          1V/oct                                              from /1 to /32.
+or to one of the scales listed below:                     LATCHING                                       from -24 to +24 semitones. The tuning of
+semitones, ionian, dorian, phrygian, lydian,
+mixolydian, aeolian, locrian, b+ blues major,
+                                                          LATCHING IMMEDIATE                             note plates is quantised to semitones over 3
+                                                          MOMENTARY                                      octaves.
+b- blues minor, p+pentatonic major, p- pen-
+tatonic minor, folk, japanese, gamelan, gypsy,
+arabian, flamenco, whole note, quarter notes
+        FILL SCALE
+Hold left transposition plate and press the
+encoder for 1 second to fill the note plates
+with notes of the selected scale.
+        ROOT NOTE
+Hold right transposition plate and rotate
+encoder to set the root note.
+
+
+
+
+                                                                                                                                                                                   SENSITIVITY & DEBOUNCE
+                                                                                                                PRESSURE BOTTOM                                                    Some MPR121 breakout boards may behave differently,
+                                                                                                                PRESSURE TOP                                                       regarding the sensitivity of touch plates. If your module in
+                                                                                                         Patch PRESSURE OUTPUT to control a pa-                                    keyboard mode behaves like a totally unpredictable sequencer
+                                                                                                         rameter in your system. Scroll to PRESSURE                                clocked by a Geiger counter try to lower SENSITIVITY and/or
+                                                                                                         BOTTOM/TOP, put your finger on a note plate                               increase DEBOUNCE.
+                                                                                                         and by laying more of your finger down on                                 To adjust these parameters hold the encoder during power-on,
+PRESETS                                            CALIBRATION                                           the touchplate, altering the pressure force                               then rotate it to modify their value. Press the encoder to scroll
+The module can save 19 presets, which              To enter calibration page press and hold encoder      listen to changes in sound controlled by                                  through parameters. Try to keep SENSITIVITY as high as possible
+includes note layout and all the parameters        for 1 sec. Connect your multimeter to NOTE CV         the PRESSURE OUTPUT. Press and hold any                                   and DEBOUNCE as low as possible.
+under settings. At startup the last recalled       OUTPUT. Scroll through octave values with the         transposition plate and rotate the encoder to                             The third parameter determines encoder direction. After setting
+preset is loaded. Rotate encoder to scroll         encoder, to modify the value press and hold           change the above mentioned values to alter                                these values the module needs to be rebooted by turning off then
+through presets.                                   any transposition plate and rotate the encoder.       the response of pressure sensing. Suggested                               on your system.
+                                                   Calibration must to be done for 1.2V/oct and 1V/      initial values are 17 for PRESSURE BOTTOM
+Hold the left transpose plate and press the        oct modes separately.                                 and 65 for PRESSURE TOP.
+encoder for 1 second to load the selected
+preset.                                            Press and hold encoder for 1 sec to...
+                                                          SAVE? ... save modified calibration values.
+Hold the left transpose plate and press the               INIT? ... load initial calibration values.
+encoder for 1 second to save the selected                 EXIT? ... exit calibration without saving modified calibration values.
+preset.
+
+
+
+                                                                                                                                     TSNM 4U USER’S GUIDE ‹4›
+CLARIFICATION
+                                                                                       #06   #07   #08   #09   #10
+ARPEGGIATOR
+ARPEGGIATOR WILL STEP THROUGH TOUCHED PLATES IN ORDER OF THEIR NUMBER (AS
+SHOWN IN THE FIGURE). THIS MEANS THAT ARPEGGIATION WON’T NECESSARY HAPPEN IN
+THE CLASSIC WAY, SINCE NOTE PLATES CAN BE CONFIGURED TO ANY NOTE. AFTER EXITING
+SETTINGS PRESSING ENCODER SWITCH WILL ACTIVATE ‘HOLD’ FUNCTION.
+
+ARPEGGIATOR VARIATOR                                                                   #01   #02   #03   #04   #05
+ADDS ADDITIONAL NOTES TO ARPEGGIO. IN THE EXAMPLE: TSNM ADDS TWO MORE NOTES TO
+ARPEGGIATED SEQUENCE, ADDITIONAL NOTES WILL BE 5 SEMITONES HIGHER COMPARED TO
+THE PREVIOUS.
+
+‘x2’ ARPEGGIO WITHOUT VARIATOR:
+C1 - E1 - G1 ...
+‘!2’ ARPEGGIO WITH VARIATOR:
+C1 - F1 - A#1 - E1 - A1 - D2 - G1 - C2 - F2 ...
+‘>2’ WITH VARIATIONS AT THE END OF ARPEGGIATED SEQUENCE:
+C1 - E1 - G1 - F1 - A1 - C2 - A#1 - D2 - F2 ...
+
+SEQUENCER
+PLAYS A SEQUENCE OF PROGRAMMED NOTES WHICH IS TRANSPOSED BY NOTE PLATES. THE
+RESULT CAN BE QUANTISED. AFTER EXITING SETTINGS PRESSING ENCODER SWITCH WILL
+RESET THE SEQUENCE TO THE FIRST STEP.
+
+
+
+
+                                                            TSNM 4U USER’S GUIDE ‹5›
+www.doboz.audio
+     2017
+

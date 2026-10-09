@@ -1,0 +1,58 @@
+                                                      TSNM (Touch Sensing Note Memory) MKII 4U v1.0
+                                                             BILL OF MATERIALS / THROUGH-HOLE (THT) VERSION / www.doboz.audio
+
+Qty Parts                    Value            Description                                   Mouser                 TME                               Alternatives
+ 11 R8-R17, R35              100R             resistor, <=5%, 600mW                         594-MRS25000C1000FCT   MF0207FTE52-100R YAGEO            MBB02070C1000FCT00, MRS25000C1000FCT00
+  7 R5, R6, R7, R18-R21      470R             resistor, <=5%, 600mW                         594-MRS25000C4700FCT   MF0207FTE52-470R YAGEO            MBB02070C4700FCT00, MRS25000C4700FC100
+  3 R26, R30, R38            1k               resistor, <=5%, 600mW                         594-MRS251K1%TR        MF0207FTE52-1K YAGEO              MBB02070C1001FCT00, MRS25000C1001FCT00
+  3 R25, R29, R37            10k              resistor, <=5%, 600mW                         594-MRS25000C1002FCT   MF0207FTE52-10K YAGEO             MBB02070C1002FCT00, MRS25000C1002FCT00
+  3 R27, R28, R36            20k              resistor, <=5%, 600mW                         594-MRS25000C2002FCT   MF0207FTE52-20K YAGEO             MBB02070C2002FCT00, MF006FF2002A50
+  2 R33, R34                 47k              resistor, <=5%, 600mW                         594-MRS25000C4702FCT   MF0207FTE52-47K YAGEO             MBB02070C4702FCT00, MRS25000C4702FCT00
+  4 R1, R2, R3, R4           100k             resistor, <=5%, 600mW                         594-MRS25000C1003FCT   MF0207FTE52-100K YAGEO            MBB02070C1003FCT00, MRS25000C1003FCT00
+
+ 1   R32                     1k               resistor, <=0.1%, 1/4W, 15PPM/C               279-YR1B1K0CC          MBB0207VD1001BC100 VISHAY
+ 1   R22                     30k1             resistor, <=0.1%, 1/4W, 15PPM/C               279-YR1B30K1CC         MRA020730K1BTA15 ARCOL
+ 1   R31                     33k              resistor, <=0.1%, 1/4W, 15PPM/C               279-YR1B33K2CC         MF006BB3302A10 ROYAL OHM
+ 2   R23, R24                100k             resistor, <=0.1%, 1/4W, 15PPM/C               279-YR1B100KCC         MBB0207VD1003BC100 VISHAY
+
+ 1   C10                     22p              capacitor, >=25V, C0G, pitch: 5mm             594-K220J15C0GF5TL2    CM-22 SR PASSIVE
+ 2   C15, C16                220p             capacitor, >=25V, C0G, pitch: 5mm             594-K221J15C0GF5UH5    CM-220 SR PASSIVES
+12   C1-C9, C11, C12, C14    100n             capacitor, >=25V, pitch: 5mm                  505-MKS2D031001A00MC   R82DC3100DQ50J KEMET
+ 1   C13                     1u               capacitor, >=25V, pitch: 5mm, height <1cm     505-MKS2B041001C00MF   B32529C0105K289 EPCOS
+ 5   C19-C23                 22u              capacitor, electrolytic, >=35V, max. ⌀6.3mm   667-EEA-GA1V220B       UMT1V220MDD1TP NICHICON           EEAGA1V220 PANASONIC
+ 2   C17, C18                47u              capacitor, electrolytic, >=35V, max. ⌀6.3mm   667-EEU-FC1V470        ULD1V470MED NICHICON              RD1V476M05011BB SAMWHA
+
+ 2   IC1, IC2                74HC595          shift register, DIP16                         595-SN74HC595N         SN74HC595N TEXAS INSTRUMENTS
+ 1   IC3                     DAC8560          16-bit DAC, VSSOP8                            595-DAC8560ICDGKT      -
+ 1   IC4                     OPA277           operational amplifier, DIP8                   595-OPA277PA           OPA277PA TEXAS INSTRUMENTS        TL071
+ 1   IC5                     TL074            operational amplifier, DIP14                  595-TL074CN            TL074ACN TEXAS INSTRUMENTS
+ 1   IC6                     78L33            voltage regulator, 3.3V, 0.1A, TO92           511-L78L33ACZ          L78L33ABZ-AP STMICROELECTRONICS
+ 1   IC7                     R-78E5.0-0.5     DC/DC converter, 5V, 500mA, SIP3              919-R-78E5.0-0.5       AMSR-7805-NZ AIMTEC
+ 2   Q1, Q2                  2N3904           transistor, NPN, bipolar, 40V, 0.2A, TO92     610-2N3904             2N3904BU ON SEMICONDUCTOR
+ 2   D1, D2                  1N4148           small signal switching diode, DO35            512-1N4148             1N4148 DIOTEC SEMICONDUCTOR
+ 2   D3, D4                  1N5819           diode, Schottky rectifying, DO41              511-1N5819             1N5819 DC COMPONENTS              1N4001
+ 1   L1                      33uH             inductor, 33uH, 200mA                         542-78F330-RC          MICC-330K-02 FASTRON
+ 3   L2, L3, L4              BL02RN1R2M2B     ferrite bead                                  81-BL02RN1R2M2         BL02RN1R2M2B MURATA               434-BEAD/4-900R-02, 807-4211R-28TR, 10 Ohm resistor
+ 1   ENC1                    Encoder          incremental encoder, 20imp/revol              858-EN11-HSM1BF20      EC11E20-20P20C-SW SR PASSIVES
+ 1   ENC1 (knob)             knob             encoder knob for ⌀6mm shaft                   450-BA600              CL17094 CLIFF + K85-BLK           thonk.co.uk
+ 2   SW1, SW2                KS01-BL          keypad switch with LED                        611-D6RLRDF1LFS        KS01-BLV-1 HIGHLY                 comes with the kit
+ 2   MATRIX1, MATRIX2        5x7 LED matrix   display, LED matrix, 5x7, com. cathode        859-LTP-747KR          FYM-7571AUHR-11 FORYARD
+ 1   TEENSY 3.2              -                microcontroller breakout board                474-DEV-13736          -                                 pjrc.com, TSNM will not work with Teensy 4.0!
+ 1   MPR121 BOARD            -                capacitive touch sensor breakout                                        eBay                           485-1982
+ 2   IC1, IC2 (socket)       IC socket        DIP socket, 16 position                       575-110433161          DS1009-16AT1NX-0A2 CONNFLY
+ 1   IC4 (socket)            IC socket        DIP socket, 8 position                        575-144308             DS1009-08AT1NX CONNFLY
+ 1   IC5 (socket)            IC socket        DIP socket, 14 position                       575-11044314           DS1009-14AT1NX-0A2 CONNFLY
+ 1   TEENSY 3.2 (socket)     socket           female socket, cut to length!                 517-929974-01-30-RK    -
+ 1   MPR121 BOARD (socket)   socket           female socket, cut to length!                 517-929974-01-20-RK    -
+
+ 1   J7 (PCB)                1x15 pin         female socket, 2.54mm, height: 7mm            437-8018702010001101   BL5.36Z FISCHER ELEKTRONIK
+ 1   J7 (panel)              1x15 pin         SMD male header, 2.54mm                       538-87898-2026         PH1-40-UA-SMT-B ADAM TECH
+ 1   POWER CONNECNTOR        EDAC connector   EDAC card edge connector, 10 positions        587-306-50-010         -
+ 2   CLOCK, RESET            banana jack      banana jack, orange                           530-108-0906-1         -                                 samodular.com, thonk.co.uk
+ 1   PITCH                   banana jack      banana jack, blue                             530-108-0910-1         -                                 samodular.com, thonk.co.uk
+ 1   PRESSURE                banana jack      banana jack, violet                           530-108-0912-1         -                                 samodular.com, thonk.co.uk
+ 2   PULSE 1, PULSE 2        banana jack      banana jack, red                              530-108-0902-1         -                                 samodular.com, thonk.co.uk
+ 2   spacer                  -                10mm spacer, male/female                      710-971100365          TFM-M3X10/DR234                   710-971100354
+ 2   screw                   -                M3 screw                                      534-9191-3             1020498 BOSSARD
+ 2   nut                     -                M3 nut                                        534-4688               BOSSARD 1089315                   144-04M030050HNDIN34
+

@@ -1,0 +1,272 @@
+   TSNMv50 FIRMWARE MANUAL FOR TOUCH SENSING NOTE MEMORY MARK II MODULES (3U & 4U)
+                                                       w w w . d o b o z . a u d i o
+
+
+Firmware v50 features: USB MIDI input and output functionality has been added, bug fixes (resolved issues with the arpeggiator and sequencer not resetting
+properly, fixed the problem with non 1V/octave modes not loading properly on modules with Teensy 4.0, addressed the uncontrolled pitch shifting when exiting the
+note sequence recorder), live functions have been removed (as they were confusing for some users), improved internal clock algorithm (clock now has a dedicated
+page in the settings menu, eliminating the need for button combinations), enhanced pressure information acquisition (previously only the last active plate was
+scanned, but now all keys are scanned simultaneously).
+
+
+                                                                NAVIGATION
+ To tune note plates hold a plate and rotate the encoder. To enter/exit settings press and hold the encoder for 1 second. Parameters are organized into groups:
+
+
+
+
+       ARPEGGIATOR & KEYBOARD                      NOTE SEQUENCER                             PRESSURE                               QUANTIZER
+
+
+
+
+               PORTAMENTO                                VIBRATO                     GATE & TRIGGER OUTPUT                        CLOCK & RESET
+
+
+
+
+                                       MIDI                                PRESETS                              CALIBRATION
+
+    To navigate through the main groups of parameters, rotate the encoder. Click the knob to enter a group. Once inside a group, use the encoder to scroll
+    through individual parameters. To edit a parameter, hold down one or both of the transpose buttons. To exit a group of settings, click the encoder knob. If
+                                         you want to exit the settings entirely, press and hold the encoder for 1 second.
+
+                                           ●○+◌ PRESS LEFT BUTTON AND ROTATE ENCODER TO...
+                                           ○●+◌ PRESS RIGHT BUTTON AND ROTATE ENCODER TO...
+                                           ●●+◌ PRESS BOTH BUTTONS AND ROTATE ENCODER TO...
+                                                                                                        ARPEGGIATOR VARIATION
+                                                                                                        ○●+◌ to set the number of variations (x1-x5).
+                                                                                                        ●●+◌ to set the interval of variation from 1 to 12 semitones.
+                                                                                                        ●○+◌ to set the behaviour of variations:
+                                                                                                        - off, no variation happens
+                                                                                                        (eg.: C0 E0 G0)*
+                                                                                                        - add variation after the arpeggiated sequence ends
+                                                                                                        (eg.: C0 E0 G0 F0 A0 C1 A#0 D1 F1)*
+                                                                                                        - add variation after each arpeggiated note
+                                                                                                        (eg.: C0 F0 A#0 E0 A0 D1 G0 C1 F1)*
+                                                                                                        * interval = 5 semitones, number of variations = x2, first variation, second variation
+
+
+
+ARPEGGIATOR STATE, HOLD                                                                                 ARPEGGIATOR CLOCK RATIO
+The arpeggiator is a common synthesizer feature that generates a looping sequence (arpeggio)            ●○+◌ to set the clock ratio of the arpeggiator relative to the master clock:
+when you press down a chord.                                                                            ÷32, ÷24, ÷16, ÷12, ÷8, ÷6, ÷4, ÷3, ÷2, ×1, ×2, ×3, ×4, ×6, ×8
+●○+◌ to enable/disable arpeggiator.
+○●+◌ to enable/disable hold function. When enabled the arpeggiator will continue to play                ARPEGGIATOR RHYTHM
+the arpeggiated sequence even when note plates are not held.                                            Applies a rhythmic pattern to the arpeggiators clock source. Think of it as a gate sequencer
+                                                                                                        between the clock source and the arpeggiators clock input. Steps that are enabled will let through
+ARPEGGIATOR DIRECTION                                                                                   the incoming clock signal, while the steps that are disabled will mute it.
+Synthesizers with traditional piano keys will generate the order of this sequence based on the          ●○+◌ to set the length of pattern (2-16 steps).
+incoming notes. TSNM creates an arpeggio based on the sequence number of pressed plates and             ●●+◌ to select a step to edit.
+the direction parameter.                                                                                ○●+◌ to edit the selected step (off-on).
+●○+◌ to set the direction of arpeggiation:
+                                                                                                        BEHAVIOUR OF TRANSPOSE BUTTONS
+- forward [eg.: 1, 2, 3, 4, 1, 2, 3, 4...]
+                                                                                                        ●○+◌ to set the behaviour of transpose buttons:
+- backward [eg.: 4, 3, 2, 1, 4, 3, 2, 1...]
+                                                                                                        - latching (transposition takes effect as soon a note plate is touched)
+- ping-pong [eg.: 1, 2, 3, 4, 3, 2, 1, 2...]
+                                                                                                        - latching immediate (transposition takes effect immediately as the button is pressed)
+- random
+                                                                                                        - momentary (transposition takes effect until the button is held down)
+                                                                                                        - octave (press the left button to transpose down by an octave, press the right button to transpose
+                           Numbering of note plates on 3U model:
+                          [07] [08] [09] [10] [11] [12]                                                 up by an octave in the range from -3 to +3 octaves)
+                          [01] [02] [03] [04] [05] [06]
+                                                                                                        PRESSURE TRANSPOSE
+                                                                                                        When enabled the outgoing note gets transposed as pressure is applied to note plates. This feature
+                           Numbering of note plates on 4U model:
+                                   [09] [10] [11] [12]                                                  is most usefull when both the arpeggiator and sequencer are disabled.
+                                   [05] [06] [07] [08]                                                  ●○+◌ to set the number of transpositions (off, x2, x4, x8).
+                                   [01] [02] [03] [04]                                                  ○●+◌ to set the interval of transposition from 1 to 12 semitones.
+
+
+                                                                                                        SEQUENCE LENGTH
+                                                                                                        ●○+◌ to set the length of the sequence (2-32 steps).
+
+                                                                                                        SEQUENCER DIRECTION
+                                                                                                        ●○+◌ to set the direction of the sequencer (forward, backward, ping-pong, random).
+
+                                                                                                        NOTE VARIATION
+                                                                                                        ●○+◌ to set the probability, that a random note will be added to the sequence (0% to 99%).
+SEQUENCER STATE                                                                                         ○●+◌ to set the scope of random notes, the maximum interval of random notes compared to
+●○+◌ to enable/disable sequencer.                                                                       the pre-programmed notes of sequence (2 to 32 semitones).
+The output of the sequencer will be summed with the output of the note plates and the arpeggiator
+(if it’s enabled). This added up note will be processed by the quantiser, thereby allowing the          SEQUENCER CLOCK
+transposition of the sequence by touching note plates.                                                  ●○+◌ to set the clock ratio of the sequencer relative to the master clock:
+                                                                                                        ÷32, ÷24, ÷16, ÷12, ÷8, ÷6, ÷4, ÷3, ÷2, ×1, ×2, ×3, ×4
+SEQUENCE RECORDER
+●○ press the left button to enter/exit sequence recording.                                              SEQUENCER RESET
+○●+◌ to select recording mode:                                                                          ●○+◌ to disable/enable reset from note plates (when enabled the sequencer will restart
+- new sequence: when recording is enabled the notes of the sequence are entered by playing the          [reset its playhead] when a new note is played on the note plates).
+note plates, to skip a step forward press the right button or rotate the encoder CW, to undo a step
+(move back) rotate the encoder CCW                                                                      GATE PRESSURE
+- overdub: when recording is enabled the sequencer keeps playing, to overwrite the programmed           ●○+◌ to disable/enable pressure control of recorded steps (when enabled pressure
+melody just hit the note plates (ratcheting gate variations are pressure sensitive when gate pressure   applied to note plates will influence the recorded gate types of steps while overdub recording is
+parameter is enabled), press the right button to mute gates per step                                    active).
+
+EDIT SEQUENCE                                                                                           CV MODE
+●○+◌ to select a step to edit.                                                                          ●○+◌ to select the behavior of sequencer note CV output:
+●●+◌ to edit note of the selected step.                                                                 - continuous: note output will change according to the programmed note values per step
+○●+◌ to edit the gate type of the selected step:                                                        - gated: note output will be updated only when a step has non-off gate type
+                                                                                                       MODULATION OF ATTACK DURATION &
+                                                                                                       MODULATION OF DEC./REL. DURATION
+                                                                                                       ●○+◌ to adjust the amount of modulation (0-63).
+                                                                                                       ●●+◌ to set the polarity of modulation (+, -).
+                                                                                                       ○●+◌ to select the source of modulation (pressure, velocity, recorder, random).
+
+                                                                                                       MODULATION OF ENVELOPE LEVEL
+                                                                                                       ●○+◌ to adjust the amount of modulation (0 to 63).
+PRESSURE OUTPUT                                                                                        ●●+◌ to select the mode of modulation:
+●○+◌ to select pressure output source:                                                                 - T: increasing modulation attenuates the peak (top) of envelope
+- PRESSURE: voltage on the pressure output will continuously follow the pressure applied to note       - B: increasing modulation shifts the fundament (bottom) of envelope
+plates                                                                                                 ○●+◌to select the source of modulation (pressure, velocity, recorder, random).
+- VELOCITY: voltage on pressure output will represent the force with which a note plate is touched
+(it takes some time to measure the velocity, therefore it's delayed by a few milliseconds compared     ENVELOPE GATE SOURCE, HARD RESET
+to the event)                                                                                          ●○+◌ to select the source of gate signal that controls envelope generator (automatic, note
+- AD: attack/decay envelope generator                                                                  plates, arpeggiator, note sequencer).
+- AR: attack/sustain/release envelope generator                                                        ○●+◌ to enable/disable envelope generator hard reset.
+- LO: looped AD envelope generator
+- RECORDER: tape or pressure sequence recorder                                                         PRESSURE SLEW LIMITER
+- RANDOM: outputs a random voltage level, runs from the same trigger source as the envelope            Creates slew limiting effect on pressure, slows down the changes of outgoing voltage.
+generator                                                                                              ●○+◌to adjust the rise time (0 to 99).
+- POLY1: two note polyphony, the pressure output acts as the note cv output of second note             ○●+◌ to adjust the fall time (0 to 99).
+- POLY2: same as above, but with a different behavior of the polyphony algorithm (each new note
+appears on the main note output, the previous note will move to the pressure output)                   PRESSURE RECORDER SETTINGS
+                                                                                                       ●○+◌ to select pressure recorder mode:
+PRESSURE RECORDER                                                                                      - SE (sequencer) records pressure data in sample'n'hold-ish fashion, stores in a (maximum 32
+Press a note plate to record pressure information.                                                     step long) sequence
+○●+◌ to select recording mode:                                                                         - TA (tape) records pressure data continuously, stores on a 5,5 second long virtual tape
+- new sequence/tape: pressing a note plate will restart the tape/sequence, the duration of             ○●+◌ to select recorder playmode (looping or one-shot).
+contact determines the length of tape (the length of sequence is set by sequence lenth parameter,      ●●+◌ to select reset source, mandatory when playmode is set to one-shot (no source,
+see below)                                                                                             keyboard, arpeggiator, note sequencer).
+- overdub: pressing a plate will momentarily enable recording, overwriting the previously recorded
+data on tape or value of current step of sequencer                                                     SEQUENCE LENGTH
+                                                                                                       ●○+◌ to set the length of recorder sequence (2 to 32).
+ATTACK DURATION, SHAPE &
+DECAY/RELEASE DURATION, SHAPE                                                                          SEQUENCER CLOCK
+●○+◌ for coarse adjustment of duration (0-63).                                                         ●○+◌ to set the clock ratio of the sequencer relative to the master clock:
+●●+◌ for fine adjustment of duration (0-3).                                                            ÷32, ÷24, ÷16, ÷12, ÷8, ÷6, ÷4, ÷3, ÷2, ×1, ×2, ×3, ×4, ×6, ×8
+○●+◌ to select the shape of segment (exp, lin, log).
+
+
+
+
+QUANTIZER SCALE                                                                                        PORTAMENTO TIME
+●○+◌ to select scale (semitones, ionian, dorian, phrygian, lydian, mixolydian, aeolian, locrian,       ●○+◌ to set the speed of gliding, i.e. how much time it takes to transition from one pitch
+blues major, blues minor, pentatonic major, pentatonic minor, folk, japanese, gamelan, gypsy,          to the next (0 to 31). This creates slew limiting effect on the CV output. The glide time will stay the
+arabian, flamenco, whole tone, user’s scale 1-8).                                                      same between notes, regardless of the interval.
+
+EDITING USER‘S SCALES:                                                                                 PORTAMENTO SHAPE
+●●+◌ to scroll through semitones (C to H).                                                             ●○+◌ to set the shape of gliding:
+○●+◌ to disable/enable selected semitone.                                                              - exponential
+User’s scales are not stored with presets, they are global. They got saved each time a preset is       - linear
+saved, e.g. if you modify a scale and save a preset, than recall another preset, the scale will load   - logarithmic
+as it was saved previously.
+                                                                                                       PORTAMENTO MODE
+ROOT NOTE                                                                                              ●○+◌ to set the mode of gliding: continuous or legato (gliding happens only when two or
+●○+◌ to set the root note of selected scale (C to H).                                                  more note plates are touched simultaneously)
+VIBRATO AMOUNT                                                                                       “GATE” OUTPUT SOURCE
+●○+◌ to adjust the amount of modulation, maximum depth (0-63).                                       ●○+◌ to select source:
+●●+◌ for fine adjustment of modulation amount (0-3).                                                 - automatic
+○●+◌ to disable/enable pressure control of modulation depth.                                         - keyboard gate
+                                                                                                     - keyboard trigger (great for exciting filters)
+VIBRATO SPEED, SHAPE                                                                                 - arp gate (when arp is disabled the module will output gate from keyboard)
+●○+◌ to adjust the speed of LFO (0-63).                                                              - note sequencer gate (when note sequencer is disabled the module will output gate from keyboard)
+●●+◌ for fine adjustment of speed (0-3).                                                             - pressure (turns on when pressure reaches half its range)
+○●+◌ to select the shape of LFO:                                                                     - random gate (running at 2x the speed of internal clock)
+- triangle                                                                                           ○●+◌ to enable/disable NOT logic (when enabled the output will be inverted).
+- square                                                                                             ●●+◌ to enable/disable AND logic (output will present only when note plates are touched).
+- smooth random (perfect to add tape-ish varble)
+- stepped random                                                                                     “TRIGGER” OUTPUT SOURCE
+- positive offset                                                                                    Same as above, except:
+- negative offset                                                                                    - when arp gate is selected and arp is disabled the output will be muted
+                                                                                                     - when note sequencer gate is selected and the sequencer is disabled the output will be muted
+
+
+
+
+CLOCK                                                                                                MIDI MODE
+This page shows the current clock source: IN (internal), EX (external), MI (MIDI). To activate       ●○+◌ to select MIDI mode.
+internal clock press any transpose button. Its tempo varies between 10 and 300 BPM:                  - MIDI OUT: all the information that is present at note, pressure, and gate jacks will also be
+●○+◌ to adjust tempo by ±0.1 BPM                                                                     transmitted as MIDI messages. In this mode, the module continues to receive and respond to MIDI
+○●+◌ to adjust tempo by ±1 BPM                                                                       clock messages.
+●●+◌ to adjust tempo by ±10 BPM                                                                      - MIDI IN: TSNM behaves as a monophonic MIDI-to-CV/clock converter. Incoming note on/off
+                                                                                                     messages are converted into V/octave voltage at the note output jack and 0-10V gate signals at
+When an external clock signal is present at the clock input jack the module automatically switches   the gate output jack. In addition, incoming CC messages are transformed into analog voltage at the
+to external clock. The same is true for incoming MIDI clock messages. There are some trade-offs      pressure output, while incoming MIDI clock is represented as an analog clock pulse at the trigger
+when using MIDI clock:                                                                               output jack.
+- arpeggiator clock multiplier/divider is usable up to x4 (x6 and x8 won’t give any clock)
+- sequencer works safely up to x3                                                                    MIDI CHANNEL
+                                                                                                     ●○+◌ to set the MIDI channel (0-16) on which the module transmits data in OUT mode
+MANUAL RESET                                                                                         or receives data in IN mode.
+Press any button to reset the arpeggiator and/or sequencer.
+                                                                                                     MIDI CC
+                                                                                                     ●○+◌ to set the number of MIDI CC (0-127, VELOCITY). In OUT mode this channel is used
+                                                                                                     to transmitt pressure value, while in IN mode this CC (or velocity) value is converted into analog
+  IMPORTANT!                                                                                         voltage at pressure output.
+  Clock BPM and MIDI parameters are global settings. When a preset is saved,
+  their last state will be stored, but it’s not possible to save different BPM and MIDI              MIDI CLOCK
+  parameters with each preset. The saved values will apply to all presets.                           ●○+◌ to set the ratio of the clock signal represented at the trigger output jack. Please note
+                                                                                                     that this parameter only affects the signal while IN mode is selected.
+                                                                                                         PRESETS
+                                                                                                         ◌ rotate the encoder to scroll through presets*.
+                                                                                                         ●○ and press encoder knob to LOAD selected preset.
+                                                                                                         ●● and press encoder knob to INIT current parameters.
+                                                                                                         ○● and press encoder knob to SAVE selected preset.
+
+                                                                                                         * TSNM modules that are built with Teensy 3.2 have the capacity to store 17 presets,
+                                                                                                         whereas modules utilizing Teensy 4.0 are capable of storing 8 presets.
+
+
+
+
+                                                                                                         INIT DAC VALUES
+                                                                                                         ●○ and press the encoder knob to revert DAC calibration values to an initial state. This can
+                                                                                                         be useful in situations where the program fails to load calibration data during the initial startup of
+                                                                                                         freshly built modules.
+
+                                                                                                         PRESSURE BOTTOM
+                                                                                                         Apply a small amount of pressure to any note plate and press the encoder knob. The module will
+                                                                                                         capture the amount of pressure and treat it as the minimal pressure value.
+                                                                                                         ●○+◌ to manually adjust minimal pressure value.
+NOTE OUTPUT CALIBRATION
+Connect a multimeter to NOTE CV output, scroll through the calibration values by rotating the            PRESSURE TOP
+encoder. Adjust the output so that is as close to the displayed value as possible:                       Apply as much amount of pressure as it feels natural to any note plate and press the encoder
+●○+◌ for fine adjustment                                                                                 knob. The module will capture the amount of pressure and treat it as the maximum pressure value.
+○●+◌ for coarse adjustment                                                                               ●○+◌ to manually adjust maximum pressure value.
+
+PRESSURE OUTPUT CALIBRATION                                                                              SAVE
+Connect a multimeter to PRESSURE CV output, scroll through the calibration values by rotating            Press and hold any transpose button then press the encoder to save settings.
+the encoder. Adjust the output so that is as close to the displayed value as possible:
+●○+◌ for fine adjustment                                                                                 EXIT
+○●+◌ for coarse adjustment                                                                               Press the encoder to exit without saving settings.
+
+VOLT/OCTAVE                                                                                              FIRMWARE
+●○+◌ to select note output mode: 1V/oct, 1.2V/oct or 2V/oct                                              Displays firmware version. When a button is held it also displays the type of Teensy being used.
+
+
+
+
+                            SENSITIVITY, DEBOUNCE, ENCODER DIRECTION, VREF
+       To adjust these attributes, press and hold the encoder during power-on. Rotate it to scroll through the parameters. Click the encoder to enable/disable editing of values. After setting these
+        values, the module needs to be rebooted by turning off and then on your system. The reason why these parameters are not easily accessible is that they typically require adjustment only
+                                                                         once during the initial setup of a freshly built module.
+
+                                                                                      DEBOUNCE AND SENSITIVITY
+         Some MPR121 breakout boards may behave differently regarding the sensitivity of touch plates. If your module in keyboard mode (with disabled arpeggiator and sequencer) behaves
+       unpredictably, as if it’s a sequencer clocked by a Geiger counter, try increasing DEBOUNCE and/or lowering SENSITIVITY. The best practice is to keep SENSITIVITY as high as possible and
+                                                                                       DEBOUNCE as low as possible.
+
+                                                                                         ENCODER DIRECTION
+                                                            Determines the direction of encoder rotation. It has two states: normal or reversed.
+
+                                                                                                  VREF
+      The fourth parameter enables/disables the internal voltage reference of the DAC (digital-to-analog converter). Set VREF to IN if using DAC8562 or DAC8563, set VREF to EX if using AD5663.
+                                   Note that this parameter only has an effect on modules built with Teensy 4.0; on modules with Teensy 3.2, it won’t even appear.
+
+
+
+          I F YO U H AVE A N Y QUESTI ONS OR REMARK S, PLE ASE FE E L F RE E T O CONTACT US VIA E MAIL AT YOUR CONV E N IE N C E .
+                                                      info@doboz.audio
+

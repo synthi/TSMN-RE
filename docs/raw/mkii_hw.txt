@@ -1,0 +1,61 @@
+                TSNM MKII 4U USER’S GUIDE BY DOBOZ
+
+
+
+
+TSNM4U                                                                                               MARK II
+
+
+
+
+ENCODER   DISPLAY       TRANSPOSE BUTTONS
+
+
+
+
+                                                     {
+                                                                      CLOCK input
+
+                                                                      RESET input
+
+                                                                      VOLT/OCTAVE output (0-8V)
+
+                                                                      PRESSURE output (0-9V)
+
+                                                                      “GATE” output (0-10V)
+
+                                                                      “TRIGGER” output (0-10V)
+
+
+
+
+                                                     {
+                                                              NOTE
+                                                              PLATES
+
+
+
+                                                     TOUCH SENSING NOTE MEMORY is a
+                                                     performance oriented monophonic keyboard controller
+                                                     featuring 12 note plates (tunable over 6 octaves) and two
+                                                     transposer buttons (variable transposition distance from
+                                                     -36 to +36 semitones). Highly accurate pitch (V/oct)
+                                                     output is guaranteed by a precision 16-bit DAC. Pressure
+                                                     sensing capability of note plates gives maximum human
+                                                     control through the dedicated CV output. On-board
+                                                     arpeggiator, sequencer, quantizer, slew limiter, vibrato,
+                                                     pressure CV recorder. The module can save 17 presets
+                                                     including keyboard layout, sequence and all the options
+                                                     under settings.
+                                                     For full description of features and calibration in-
+                                                     structions please download the “TSNM Firmware
+                                                     v4.0 User’s Guide” document.
+
+                                                      depth: 30mm
+                                                      power: <50mA @ +15V, <15mA @ -15V
+
+
+
+
+                www.doboz.audio / info@doboz.audio
+

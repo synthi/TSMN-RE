@@ -1,0 +1,571 @@
+      TSNM
+-----------------------------------------
+       TOUCH SENSING NOTE MEMORY v4.1
+
+
+
+
+                  - 1 -
+www.doboz.audio
+     MMXXII
+Table of contetnts . . . . . . . . . . . . . . . . . . . . . . . 3                        Pressure slew limiter . . . . . . . . . . . . 18
+                                                                                          Pressure recorder settings . . . . . . . . 19
+Live, settings, internal clock . . . . . . . . . . . . . . . . 4                          Sequence length . . . . . . . . . . . . . . . . 19
+                                                                                          Sequencer clock . . . . . . . . . . . . . . . . 19
+Keyboard and arpeggiator settings . . . . . . . . . . . 5
+        Arp state, hold . . . . . . . . . . . . . . . . . 6                  Quantizer settings . . . . . . . . . . . . . . . . . . . . . . 20
+        Arp direction . . . . . . . . . . . . . . . . . . . 6                        Scale . . . . . . . . . . . . . . . . . . . . . . . . 20
+        Arp variation . . . . . . . . . . . . . . . . . . . 6                        Root note . . . . . . . . . . . . . . . . . . . . . 20
+        Arp clock . . . . . . . . . . . . . . . . . . . . . 7
+        Arp rhythm . . . . . . . . . . . . . . . . . . . . 7                 Portamento settings . . . . . . . . . . . . . . . . . . . . . 21
+        Behaviour of transpose buttons . . . . . 8                                  Portamento time . . . . . . . . . . . . . . . . 21
+        Pressure transpose . . . . . . . . . . . . . . 8                            Portamento shape . . . . . . . . . . . . . . . 21
+                                                                                    Portamento mode . . . . . . . . . . . . . . . 21
+Note sequencer settings . . . . . . . . . . . . . . . . . . . 9
+        Sequencer state . . . . . . . . . . . . . . . . 10                   Vibrato settings . . . . . . . . . . . . . . . . . . . . . . . 22
+        Sequence recorder . . . . . . . . . . . . . . 10                              Vibrato amount . . . . . . . . . . . . . . . . . 22
+        Edit step . . . . . . . . . . . . . . . . . . . . . 11                        Vibrato speed, shape . . . . . . . . . . . . . 22
+        Sequence length . . . . . . . . . . . . . . . . 11
+        Sequence direction . . . . . . . . . . . . . . 11                    Gate and trigger output settings . . . . . . . . . . . . 23
+        Note variation . . . . . . . . . . . . . . . . . 12                          Gate output source . . . . . . . . . . . . . 24
+        Sequencer clock . . . . . . . . . . . . . . . . 12                           Trigger output source . . . . . . . . . . . 24
+        Sequencer reset . . . . . . . . . . . . . . . . 13
+        Gate pressure . . . . . . . . . . . . . . . . . . 13                 Presets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+        CV mode . . . . . . . . . . . . . . . . . . . . . . 13
+                                                                             Calibration . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+Pressure output settings . . . . . . . . . . . . . . . . . . . 14                     Note output calibration . . . . . . . . . . 27
+        Pressure output . . . . . . . . . . . . . . . . 15                            Pressure output calibration . . . . . . . 27
+        Pressure recorder . . . . . . . . . . . . . . . 16                            Volt/octave . . . . . . . . . . . . . . . . . . . 28
+        Attack duration, shape . . . . . . . . . . . 17                               Init DAC values . . . . . . . . . . . . . . . . 28
+        Dec./rel. duration, shape . . . . . . . . . 17                                Pressure bottom . . . . . . . . . . . . . . . . 28
+        Modulation of attack duration . . . . 17                                      Pressure top . . . . . . . . . . . . . . . . . . . 29
+        Modulation of dec./rel. duration . . . 17                                     Save calibration . . . . . . . . . . . . . . . . 29
+        Modulation of envelope level . . . . . . 18                                   Exit calibration . . . . . . . . . . . . . . . . 29
+        Envelope gate source, hard reset . . . 18
+
+
+
+                                                                     - 3 -
+               Live
+Usually this is the place where you        Plate note values: Press and hold a note plate and rotate the encoder to select a note (the
+want to perform. The new firmware          Volt/octave output is quantised to semitones or to a selected scale). The same action also
+adds some more possibilities. Press and    applies to transposition buttons. Their value can range from -36 to +36 semitones. Hold both
+hold the encoder knob and immediatly       transposition buttons to edit the transposition distance when none of them is activated.
+rotate it to toggle between functions of   Arp state: Rotate the encoder to disable/enable arpeggiator.
+live page. This may feel quirky for the    Arp hold: Rotate the encoder to disable/enable hold.
+first time, but makes easier to reach      Note sequencer state: Rotate the encoder to disable/enable note sequencer.
+some important paramteres of the           Note sequencer recorder: Rotate the encoder to enable/disable recording, when enabled the
+module (listed below). Press and hold      recording mode will automatically switch to overdubbing.
+encoder knob for 1 second to enter         Pressure recorder: Rotate the encoder to enable/disable recording, its behavior will
+settings.                                  correspont to the set parameters.
+
+
+           Settings
+Rotate the encoder to scroll through       LT means: hold the left transpose button and rotate encoder
+main groups of parameters, click the       to edit parameter
+knob to enter a group. When entered
+rotate the encoder to scroll through       BT means: hold both transpose buttons and rotate encoder
+parameters, hold one (or both) of          to edit parameter
+transpose buttons to edit parameters.
+To exit a group of settings click the      RT means: hold the right transpose button and rotate encoder
+encoder knob, to leave settings press      to edit parameter
+and hold encoder for 1 second.
+
+
+
+                                               Internal clock, manual reset
+The new firmware adds an internal clock, its speed can be tapped by holding the left transpose button and clicking the encoder knob.
+In live mode you may want to avoid this action, since it will toggle the state of transposition. To reset arpeggiator and sequencer hold
+the right transpose button and click the encoder.
+
+                                                                  - 4 -
+KEYBOARD AND ARPEGGIATOR SETTINGS
+
+
+
+
+              - 5 -
+Arp state, hold
+LT disable/enable arpeggiator
+RT disable/enable hold, when enabled the arpeggiator
+will continue play the arpeggiated sequence even when note
+plates are not touched
+
+
+Arp direction
+LT direction of arpeggiation:
+- up
+- down
+- up-down
+- random
+
+Arp variation
+LT status and behavior:
+- off
+- add variation after the arpeggiated sequence ends
+- add variation after each arpeggiated note
+BT distance of added notes (1 to 12 semitones)
+RT number of variations (1 to 5 times)
+
+
+
+              - 6 -
+Arp clock
+LT individual clock rate of arpeggiator, which can be the
+division or multiplication of the internal clock/external sync
+(:32, :24, :16, :12, :8, :6, :4, :3, :2, *1, *2,
+*3, *4, *6, *8)
+
+
+Arp rhythm
+Applies a rhythmic pattern to the arpeggiators clock source.
+LT length of pattern (2-16)
+BT select step to edit
+RT turn selected step off-on
+
+
+
+
+               - 7 -
+Behaviour of transpose plates
+LT behaviour:
+- latching (takes effect as soon a note plate is touched)
+- latching immediate (takes effect immediately)
+- momentary (takes effect till it's touched)
+- octave (from -3 to +3 octave)
+
+Pressure transpose
+When enabled the outgoing note gets transposed as pressure
+is applied to note plates. This feature is most usefull when
+both the arpeggiator and sequencer are disabled. The basic
+idea comes from Skot Wiedmann's Hyve synthesizer.
+LT status and number of transpositions:
+- x- [off]
+- x2
+- x4
+- x8
+RT distance of transposition (1 to 12 semitones)
+
+
+
+
+              - 8 -
+NOTE SEQUENCER SETTINGS
+
+
+
+
+         - 9 -
+Sequencer state
+LT disable/enable sequencer
+
+
+
+
+Sequence recorder
+LT press to disable/enable recording
+RT mode of recording:
+- new sequence: when recording is enabled the notes of
+the sequence are entered by playing the note plates, to skip
+a step forward press the upper transpose plate or rotate the
+encoder CW, to undo a step (move back) rotate it CCW
+- overdub: when recording is enabled the sequencer
+keeps playing, to overwrite the programmed melody just
+hit the note plates (ratcheting gate variations are pressure
+sensitive), press upper transpose plate to mute gates per step
+
+
+
+
+              - 10 -
+Edit gate/note per step
+LT select step (1 to sequence length)
+BT set note per step
+RT set gate type of selected step:
+- ------------ (off)
+- IIIIIIIIIIII (full on)
+- IIIIII------
+- III---III---
+- II--II--II--
+- I--I--I--I--
+
+Sequence length
+LT number of steps in the sequence (2 to 32)
+
+
+
+
+Sequencer direction
+LT direction of sequencing:
+- forward
+- backward
+- ping-pong
+- random
+
+
+             - 11 -
+Note variation
+LT probability, that a random note will be added to the
+sequence (0% to 99%)
+RT scope of random notes, the maximum distance of random
+notes compared to the pre-programmed notes of sequence
+(2 to 32 semitones)
+
+
+Sequencer clock
+LT individual clock rate of sequencer, which can be the
+division or multiplication of the internal clock/external sync
+(:32, :24, :16, :12, :8, :6, :4, :3, :2, *1, *2,
+*3, *4)
+
+
+
+
+              - 12 -
+Sequencer reset
+LT disable/enable reset from note plates (when enabled
+the sequencer will restart [reset its playhead] when a new
+note is played on the note plates)
+
+
+
+Gate pressure
+LT disable/enable pressure control of active gates (when
+enabled pressure applied to note plates will influence the pre-
+programmed gate types of steps)
+
+
+
+CV mode
+LT behavior of sequencer note CV output:
+- continuous: note output will change according to the
+programmed note values per step
+- gated: note output will be updated only when a step has
+non-off gate type
+
+
+
+
+              - 13 -
+PRESSURE OUTPUT SETTINGS
+
+
+
+
+          - 14 -
+Pressure output
+LT available sources:
+- pressure: voltage on the pressure output will
+continuously follow the pressure applied to note plates
+- velocity: voltage on pressure output will represent the
+force with which a note plate is touched (it takes some
+time to measure the velocity, therefore it's delayed by a few
+milliseconds compared to the event)
+- AD: attack/decay envelope generator
+- AR: attack/sustain/release envelope generator
+- LO: looped AD envelope generator
+- recorder: tape or sequencer output
+- random: outputs a random voltage level, runs from the
+same trigger source as the envelope generator
+- poly1: two note polyphony, the pressure output acts as
+the note cv output of second note
+- poly2: same as above, but with a different behavior of the
+polyphony algorithm (each new note appears on the main
+note output, the previous note will moved to the pressure
+output)
+
+
+
+
+             - 15 -
+Pressure recorder
+Press a note plate to record pressure information.
+RT mode of recording:
+- new sequence/tape: pressing a note plate will restart the
+tape/sequence, the duration of contact determines the length
+of tape (the length of sequence is set by sequence lenth
+parameter, see below)
+- overdub: pressing a plate will momentarily enable
+recording, overwriting the previously recorded data on tape
+or value of current step of sequencer
+
+
+
+
+             - 16 -
+Attack duration, shape
+LT coarse adjustment of duration (0 to 63)
+BT vernier of duration (0 to 3)
+RT shape of segment (exp, lin, log)
+
+
+Decay/release duration, shape
+LT coarse adjustment of duration (0 to 63)
+BT vernier of duration (0 to 3)
+RT shape of segment (exp, lin, log)
+
+
+Modulation of attack duration
+LT amount of modulation (0 to 63)
+BT polarity of modulation (+, -)
+RT source of modulation (pressure, velocity,
+recorder, random)
+
+Modulation of dec./rel. duration
+LT amount of modulation (0 to 63)
+BT polarity of modulation (+, -)
+RT source of modulation (pressure, velocity,
+recorder, random)
+
+            - 17 -
+Modulation of envelope level
+LT amount of modulation (0 to 63)
+BT mode of modulation
+- T: increasing modulation attenuates the peak (top) of
+envelope
+- B: increasing modulation shifts the fundament (bottom)
+of envelope
+RT source of modulation (pressure, velocity,
+recorder, random)
+
+Envelope gate source, hard reset
+LT source of gate sygnal that controls envelope generator:
+- automatic
+- note plates (keyboard)
+- arpeggiator
+- note sequencer
+UT envelope generator hard reset (off-on)
+
+
+Pressure slew limiter
+Creates slew limiting effect on pressure, slows down the
+changes of outgoing voltage.
+LT rise speed (0 to 99)
+RT fall speed (0 to 99)
+
+             - 18 -
+Pressure recorder settings
+LT recorder mode:
+- SE (sequencer) records pressure data in sample'n'hold-
+ish fashion, stores in a (maximum 32 step long) sequence
+- TA (tape) records pressure data continuously, stores on a
+5,5 second long virtual tape
+RT recorder playmode (looping or one-shot)
+BT reset source, mandatory when playmode is set to
+one-shot (no source, keyboard, arpeggiator, note
+sequencer)
+
+Sequence length
+LT length of recorder sequence (2 to 32)
+
+
+
+
+Sequence clock
+LT individual clock rate of sequencer, which can be the
+division or multiplication of the internal clock/external sync
+(:32, :24, :16, :12, :8, :6, :4, :3, :2, *1, *2,
+*3, *4, *6, *8)
+
+
+
+              - 19 -
+QUANTIZER
+SETTINGS
+       Scale
+       LT select scale:
+       Semitones, Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian,
+       Locrian, Blues major, Blues minor, Pentatonic major, Pentatonic
+       minor, Folk, Japanese, Gamelan, Gypsy, Arabian, Flamenco, Whole
+       tone, User's Scale 1 to User's Scale 8
+
+       Editing user's scales:
+       BT scroll through semitones (C to H)
+       RT disable/enable selected semitone
+       User's scales are not stored with presets, they are global. To save changes go to
+       calibration settings, scroll to SAVE, hold LT and click the encoder button.
+
+
+       Root note
+       LT root note of selected scale (C to H)
+
+
+
+
+                            - 20 -
+PORTAMENTO
+SETTINGS
+             Portamento time
+             Creates slew limiting effect on the CV output, sets the speed
+             of gliding (ie: how much time it takes to transition from one
+             pitch to the next). The glide time will stay the same between
+             notes, regardless of the interval.
+             LT time (0 to 31)
+
+             Portamento shape
+             LT shape:
+             - exponential
+             - linear
+             - logarithmic
+
+             Portamento mode
+             LT mode:
+             - continuous
+             - legato (gliding happens only when two or more note
+             plates are touched simultaneously)
+
+                          - 21 -
+VIBRATO
+SETTINGS
+           Vibrato amount
+           LT amount of modulation, maximum depth (0 to 63)
+           BT vernier of modulation amount (0 to 3)
+           RT pressure control over modulation depth (off-on)
+
+
+           Vibrato speed, shape
+           LT speed of LFO (0 to 63)
+           BT vernier of speed (0 to 3)
+           RT shape (triangle, square, smooth random, stepped
+           random, positive offset, negative offset)
+
+
+
+
+                       - 22 -
+GATE AND TRIGGER OUTPUT SETTINGS
+
+
+
+
+              - 23 -
+ "Gate" output source
+ LT source:
+ - automatic
+ - keyboard gate
+ - keyboard trigger (great for exciting filters)
+ - arp gate (when arp is disabled the module will output gate from keyboard)
+ - note sequencer gate (when note sequencer is disabled the module will
+ output gate from keyboard)
+ - pressure (turns on when pressure reaches half its range)
+ - random gate (running at 2x the speed of internal clock)
+ - clock (internal clock multiplied by 4)
+ RT NOT off-on (inverts output)
+ BT AND off-on (output will present only when note plates are touched)
+
+"Trigger" output source
+Same as above, except:
+- when arp gate is selected and arp is disabled the output will be muted
+- when note sequencer gate is selected and the sequencer is disabled the
+output will be muted
+- clock outputs internal clock multiplied by 2
+
+
+
+
+                      - 24 -
+PRESETS
+
+          Presets
+          Rotate encoder to scroll through presets (1 to 17).
+          LT press encoder knob to LOAD selected preset
+          BT press encoder knob to INIT current parameters
+          RT press encoder knob to SAVE selected preset
+
+
+
+
+                       - 25 -
+CALIBRATION
+
+
+
+
+   - 26 -
+Note output calibration
+Connect a multimeter to Note CV output, scroll through the
+values (0V, 2V, 5V, 8V) by rotating the encoder.
+LT fine adjustment
+RT coarse adjustment
+
+Pressure output calibration
+Connect a multimeter to Pressure CV output, scroll through
+the values (0V, 2V, 5V, 8V) by rotating the encoder.
+LT fine adjustment
+RT coarse adjustment
+
+
+
+
+             - 27 -
+Volt/octave
+LT output mode:
+- 1V/oct
+- 1.2V/oct
+- 2V/oct
+
+
+Init DAC values
+LT press encoder knob to revert DAC values to an initial
+state. This may be usefull, if for some reasons the program
+won't load them automatically at the first startup in case of
+fresh builds.
+
+
+Pressure bottom
+Apply a small amount of pressure to any note plate and
+press the encoder knob. The module will capture the amount
+of pressure and treat it as the minimal pressure value.
+LT manual adjustment
+
+
+
+
+              - 28 -
+Pressure top
+Apply the as much amount of pressure as it feels natural to
+any note plate and press the encoder knob. The module will
+capture the amount of pressure and treat it as the maximum
+pressure value.
+LT manual adjustment
+
+Save
+Press and hold any transpose button then press the encoder
+to save settings.
+
+
+
+
+Exit
+Press the encoder to exit without saving settings.
+
+
+
+
+             - 29 -
+                               SENSITIVITY, DEBOUNCE
+                                & ENCODER DIRECTION
+
+
+To adjust these attributes press and hold the encoder during power-on, rotate it to scroll through parameters.
+Click the encoder to enable/disable editing of values. After setting these values the module needs to be
+rebooted by turning off then on your system.
+
+Some MPR121 breakout boards may behave differently, regarding the sensitivity of touch plates. If your
+module in keyboard mode (with diasbled arpeggiator and sequencer) behaves like a totally unpredictable
+sequencer clocked by a Geiger counter try to lower SENSITIVITY and/or increase DEBOUNCE. Try to
+keep SENSITIVITY as high as possible and DEBOUNCE as low as possible.
+
+The third parameter determines the direction of encoder rotation.
+
+The fourth parameters enables/disables the internal voltage refernce of the DAC (digital-to-analog
+converter). Set VR to IN if using DAC8562 or DAC8563, set VR to EX if using AD5663.
+
+
+
+
+                                                   - 30 -
+If you have any questions or remarks
+    please contact me via e-mail:
+     info@doboz.audio
+

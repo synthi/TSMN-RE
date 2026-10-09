@@ -1,0 +1,33 @@
+                TSNM 4U
+                                                                                                  Slide front panel onto the pots, finger tighten nuts. Make sure the SMD header is standing on
+                                                                                                  it's place. Align the matrices and LEDs, that they line up with the holes on the panel as
+                                                                                                  accurately as possible. Now gingerly solder the prepared components, before moving to another
+                ASSEMBLY NOTES                                                                    leg/pad re-check alignment. Remove the panel, pay attention to the 16 pin header, pull it apart
+                                                                                                  gently, not to rip off the pads and traces from the back of the panel that are already fixed.
+ THE INSTRUCIONS BELOVE SERVES AS A ROUGH GUIDE TO BUILD YOUR MODULE.                             Solder the remaining pins of the SMD connector. Insert the encoder to it’s place. To line up the
+IF YOU ARE A CONFIDENT BUILDER FEEL FREE TO FOLLOW YOUR USUAL METHODS.                            encoder with the pots mount an extra nut on its thread. This will narrow the gap between the
+-----------------------------------------------------                                             encoder and panel. Solder it. Lastly add the power cables, wire up banana connectors.
+SEMICONDUCTORS
+Orientation of IC1-IC5 and IC7, Q1, D1 and D2 is clearly designated on the PCB. The most          UPLOAD THE FIRMWARE
+frightening part may be the DAC8560 (IC3), it’s a VSSOP-8 device. Search YouTube for “smd         Cut the trace on the bottom of Teensy next to VIN pin to separate VIN from VUSB. This prevents
+ic soldering”, then prepare your flux and solder wick.                                            powering the Teensy simultaneously from USB and the eurorack power supply. Install the
+                                                                                                  Teensy loader application, v1.33 or later is required (www.pjrc.com/teensy/loader.html),
+RESISTORS, CAPACITORS, FILTER BEADS                                                               download the hex file from www.doboz.audio. Open the hex file in the Teensy loader, connect
+First of all solder resistors with 0.1% tolerance (R1, R2, R13, R14, R15), then the rest. After   the Teensy with a USB cable to your computer and power up the module. Press the pushbutton
+finishing the module you may want to change R30, R31. They act as current limiting resistors,     on the Teensy board, click the program icon (or choose program from the operation menu),
+brightness of the LEDs (LED1, LED2) depends of their value.                                       click the reboot icon (or choose reboot from the operation menu). Your module should now
+                                                                                                  come to life, if newly built proceed to calibration (detailed in the User's Guide).
+HEADERS, SOCKETS, JACKS, TH CAPS
+Solder the sockets for Teensy and MPR121 boards, expander connector (EXP) and electrolytic        EPILOGUE
+capacitors (C19, C20, C21).                                                                       Before inserting the Teensy, it’ll make sense to check voltages indicated in the schematic.
+                                                                                                  MPR121 breakout boards differ from each other. If despite proper calibration the module still
+LED MATRICES, LEDS, JACKS                                                                         behaves strangely get another MPR121 board from a different supplier. In our experience blue
+Insert LEDs (LED1, LED2), matrices (MATRIX1, MATRIX2), potentiometer and the 16 pin (SMD          boards perform best. Black ones are usually alright too, however some of them required to set
+male/7mm tall female) header, don’t solder them yet. Orientation of various matrices:             SENSITIVITY lower and DEBOUNCE higher (see User’s Guide).
+- LTP-747KR text should face to right                                                             Different LED matrices may also work correctly, but before ordering carefully compare their
+- TA07-11SURKWA text should face to left                                                          pinout with the ones mentioned in the BOM (double check datasheets).
+- KWM-20571CSB text should face to left
+
+
+                                         www.doboz.audio * www.fb.com/doboz.audio * info@doboz.audio
+
